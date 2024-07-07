@@ -1,0 +1,48 @@
+What is the Database?
+  > collection of data is database
+    example:- Phone Book
+              marks records
+              library management system
+              big company like amazon and filpkart
+  > A method for accessing and manupulating the data
+  > database management system
+  > comman DataBase Management System(DBMS): - Postgre SQL, MySQL, Oracle, SQLite
+
+MySQL is a software to connect with the database, and SQL is a programming language, with 
+the help of SQL which is a progamming language we can run in the software to retrive the 
+database.
+
+# DataBase > A structure set of compurterized data with an accesible interface
+
+Q: What does data matter ?
+A:> Data is knowledge
+  > Data is money
+
+# Data has always played an important role in industries, but now data itself is a huge 
+booming industries
+
+# Stryctured Query Language
+  > to create a database
+  > to store a database in the form of table
+  > to modify or extract the database
+  > multiple language for SQL are MySQL, PostgreSQL, Oracle, SQLlite
+
+# Overview of SQL
+> SQL became standard form by ANSI(American National Standard Institute)
+> application > business professional
+              > developer
+              > data scientist
+              > statistics post used language
+Q: What can SQL do?
+A: it can execute queries agaist the database.
+  > To Retrive the data
+  > Insert records
+  > Update records
+  > Delete data
+  > Create a new Datebase
+  > Create a table in a database
+
+MySQL VS SQL
+> SQL is a language we use to talk with our database
+  Example: Find all users who are 18 or older
+  SELECT * FROM USER WHERE AGE > 18;
