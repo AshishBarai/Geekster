@@ -1,0 +1,10 @@
+SELECT * FROM ORDER;
+
+SELECT *
+FROM products
+ORDER by Price DESC;
+
+SELECT customerName, COUNT(*) AS 'number of oreder'
+FROM customers
+INNER JOIN orders ON orders.customerID = custmoers.customerID
+ORDER BY custmoers.customerID 
