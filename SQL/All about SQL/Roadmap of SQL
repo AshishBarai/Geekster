@@ -1,0 +1,62 @@
+# Introduction of SQL
+
+# Overview and Installation
+  > datebase?
+  > SQL and MYSQL?
+  > about Groom id
+
+# Creating database and table
+
+# Inserting data
+  > Mulitible insert
+  > null and not null
+  > default values
+  > primary key
+
+# CRUD commands
+  > Create
+  > Read
+  > Update
+  > Delete
+
+# String functions
+  > concatenate
+  > substring
+  > replace, reverese, upper case, lower case, character length
+  > challenges
+
+# Selection refining
+  > Distinct
+  > limit
+  > order by
+  > like, wildcard keyword
+
+# Aggregate function
+  > count
+  > group by
+  > min/max
+  >average / sum
+
+# Data Types
+  > Char Vs Varchar
+  > Float and decimal
+  > Date, time, datetime, timestamp, and date related
+
+# Logical operators
+  > greater / smaller, not equal, not like
+  > between
+  > case (replace if_else)
+  > OR/AND
+
+# Relationship
+  > types of relationship
+  > foreign key
+  > Join > Cross join
+         > inner join
+         >left/right join
+
+# HackerRank/ Leetcode Question
+
+# Project
+  > instagram database clone
+  > Homewrok project (resume)(linkedin)
