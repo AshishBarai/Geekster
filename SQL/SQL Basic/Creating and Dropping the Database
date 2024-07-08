@@ -1,0 +1,16 @@
+# Creating And Droping the Database
+
+Syntax to create a data base:
+CREATE DATABASE <name>; 
+
+and to show the data base:
+SHOW DATABASES;
+
+and to drop the database:
+DROP DATABASE <name>;
+
+To use particualar database will use 'USE':
+USE <name>;
+
+To know which database we have selected will use:
+SELECT DATABASE();
