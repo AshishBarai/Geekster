@@ -1,1 +1,8 @@
 # Overview of Goorm IDE
+
+goormIDE is a cloud-based integrated development environment (IDE) that allows you to write, 
+compile, and run code online. It provides a collaborative workspace with features like code 
+editors, terminals, and project management tools. Here’s how you can use MySQL with goormIDE:
+
+In all container tabs, create a new container and select 'Install MySQL' & 'Enable MySQL ctl command' 
+which is available in Additional Module tab then create a new container.
