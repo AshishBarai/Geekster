@@ -1,0 +1,49 @@
+# Creating & dropping the table
+
+Introduction to table
+> A database is just a bunch of tables, that were data is store.
+> Table holds data: A collection of related data held in a structed formate within a database.
+
+# Data Types
+1. Numeric Types
+> INT
+> DECIMAL
+> FLOAT
+> DOUBLE
+
+2. STRING TYPES
+> CHAR
+> VARCHAR
+> ENUM
+
+3. DATE TYPES
+> DATE
+> TIMESTAMP
+> TIME
+> YEAR
+
+# Syntax for creating a table
+CREATE TABEL <table_name>
+(
+column_name datatype,
+column_name datatypes
+);
+
+Example:
+CREATE TABLE cats
+(
+name varchar(100),
+age int
+);
+
+# To check the status of table:
+  SHOW TABLES;
+this query will retrive the tabla data.
+
+
+To know the structure of the data:
+  DESCRIBE cats;
+OR
+  SHOW COLUMNS FROM cats
+# To Drop the table
+DROP TABLE CATS; 
