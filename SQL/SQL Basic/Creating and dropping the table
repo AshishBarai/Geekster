@@ -47,3 +47,13 @@ OR
   SHOW COLUMNS FROM cats
 # To Drop the table
 DROP TABLE CATS; 
+
+# To create a table:
+CREATE TABLE pastries
+(
+name varchar(50),
+qunatity int
+);
+
+# To drop table named pastries:-
+DROP TABLE pastries
