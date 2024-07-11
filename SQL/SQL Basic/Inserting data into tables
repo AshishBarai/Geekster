@@ -1,1 +1,22 @@
 # Inserting Data Into Tables
+
+parameters: In a table name of the column's name are know as parameters
+  for example: inset into cat(name varchar, age), name and age are parameters
+
+argument: The values which we provide in the data table are the argument
+  for example: values('ashish',25), ashish and 25 are the argument.
+
+# Creating a table named pastries with parameter name and age:
+CREATE TABLE pastries
+(
+name varchar(50),
+age int
+);
+
+# Inserting values in table named pastries with argument as ashish,25, and ankit,30
+insert into pastries values
+('ashish',25),
+('ankit',30);
+
+# Reading the data in pastries
+select * from pastries;
