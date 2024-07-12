@@ -1,1 +1,38 @@
 # Inserting Challenge
+
+This script demonstrates how to create a table and insert records, including inserting 
+multiple records at once.
+
+-- Insert Challenge
+-- Create a people table
+CREATE TABLE people
+(
+firt_name varchar(20),
+last_name varchar(20),
+age int
+);
+This command creates a table named people with three columns: first_name, last_name, and 
+age. The first_name and last_name columns can store text up to 20 characters long, and the
+age column stores integer values.
+
+
+-- Insert single record:
+insert into people values
+('Tina','Belcher',13);
+This command inserts a record into the people table with first_name as 'Tina', last_name as
+'Belcher', and age as 13.
+
+
+-- Insert your 2nd person
+insert into people values
+('bob','belcher',42);
+This command inserts another record into the people table with first_name as 'bob', 
+last_name as 'belcher', and age as 42.
+
+
+-- Insert multiple records:
+insert into people values
+('linda','belcher',45),
+('phillip','frond',38),
+('calvin','Fischoeder',70)
+This command inserts multiple records into the people table in a single statement.
