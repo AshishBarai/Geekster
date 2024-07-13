@@ -1,0 +1,74 @@
+# About Null, Not null, Default, Primary Key
+
+# Null values
+create table beautiful_people
+(
+name VARCAHR(100),
+age INT
+);
+In this query, the name and age columns can accept NULL values, meaning they can be 
+left empty.
+
+
+# Not Null values
+CREATE TABLE beautiful_people
+(
+name VARCHAR(100) NOT NULL,
+age INT NOT NULL
+);
+This query ensures that both name and age columns cannot be left empty. You must 
+provide values for these columns when inserting data.
+
+# Default values
+CREATE TABLE beautiful_people
+(
+name VAHRCHAR(100) DEFAULT "no name provided',
+age INT DEFAULT "101"
+);
+This query sets default values for name and age if no values are provided during data 
+insertion. Here, the default value for name is 'no name provided' and for age is 101.
+
+# Primary Key
+CREATE TABLE beautiful_people
+(
+people_id INT NOT NULL,
+name VARCHAR(100),
+age INT,
+PRIMARY KEY(people_id)
+);
+A primary key uniquely identifies each record in the table. In this case, people_id is 
+the primary key, ensuring each people_id value is unique and not null.
+for example: If we take the username on Instagram, we cannot create multiple accounts 
+with the same name. This means Instagram requires each username to be unique, functioning 
+as a primary key. Here, the data won't be null and will never be redundant.
+
+we can also use auto increment
+CREATE TABLE beautiful_people
+(
+people_id INT NOT NULL AUTO_INCREMENT,
+name VARCHAR(100),
+age INT,
+PRIMARY KEY(people_id_
+)
+The AUTO_INCREMENT attribute automatically generates a unique value for people_id for 
+each new record.
+
+# Example of everything:
+CREATE TABLE employee
+(
+id INT NOT NULL AUTO_INCREMENT,
+last_name VARCHAR(50) NOT NULL,
+first_name VARCHAR(50) NOT NULL,
+middle_name VARCHAR(50),
+age INT NOT NULL,
+ current_status VARCHAR(50) DEFAULT 'employed',
+PRIMARY KEY (id)
+);
+This table definition combines NOT NULL, DEFAULT, AUTO_INCREMENT, and PRIMARY KEY 
+constraints to create a robust table structure for employee data.
+
+Explanations:
+NULL: Allows a column to have no value.
+NOT NULL: Ensures a column must have a value.
+DEFAULT: Sets a default value for a column if no value is provided.
+PRIMARY KEY: Uniquely identifies each record in a table and cannot be NULL.
