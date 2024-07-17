@@ -8,3 +8,43 @@ U: UPDATE
 D: DELETE
 
 About Create Command
+CREATE command is used to add new records or data to a database, specificlly it 
+involves adding new rows to a table
+
+-- # CREATE
+
+CREATE TABLE fish
+(
+	fish_id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(100),
+    breed VARCHAR(100),
+    age INT,
+    PRIMARY KEY (fish_id)
+);
+
+1.fish_id INT NOT NULL AUTO_INCREMENT: This column represents the unique identifier for 
+each fish. It is an integer, cannot be null, and will automatically increment with each 
+new record.
+
+2.name VARCHAR(100): This column stores the name of the fish, allowing up to 100 
+characters.
+
+3.breed VARCHAR(100): This column stores the breed of the fish, also allowing up to 100 
+characters.
+
+4.age INT: This column stores the age of the fish as an integer.
+
+5.PRIMARY KEY (fish_id): The fish_id column is designated as the primary key, meaning 
+each value in this column must be unique and cannot be null, ensuring each record in the table can be uniquely identified.
+
+To inser the values:
+INSERT INTO fish(name, breed, age) 
+VALUES
+	('ringo','koi',4),
+    ('cindy','shark',10),
+    ('dumbeldore','shark',11),
+    ('egg','pleco',4),
+    ('misty','koi',13),
+    ('luffy','oscar',9),
+    ('jackson','angel',7);
+
