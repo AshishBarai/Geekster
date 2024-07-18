@@ -1,0 +1,66 @@
+# About CRUD part 1 (READ)
+
+CRUD command
+
+C: CREATE
+R: READ
+U: UPDATE
+D: DELETE
+
+About the READ Command in CRUD
+The READ command in CRUD operations is used to retrieve data from 
+a database. This operation is typically performed using the SQL SELECT 
+statement, which allows you to fetch data based on specific criteria.
+
+Selecting All Columns:
+To select all columns from a table:
+SELECT * 
+FROM fish
+The * symbol means it selects all the columns in the fish table.
+
+Selecting Specific Columns:
+If you want to select a particular column, you can specify the column name:
+SELECT column_name 
+FROM fish
+
+For example, to select the name and age columns:
+for two columns:
+SELECT name, age 
+FROM fish
+
+Using the WHERE Clause:
+The WHERE clause is used to filter records based on specific conditions.
+
+To select all columns where the age is 4:
+SELECT * FROM fish
+WHERE age = 4;
+
+SELECT * FROM fish
+WHERE name = "egg";
+
+The WHERE clause filters the rows according to the given condition. It is also case
+insensitive, meaning it does not differentiate between uppercase and lowercase letters 
+in string comparisons.
+
+# About ALIAS 'AS'
+The AS keyword in SQL is used to assign an alias to a column or table, providing a 
+temporary name that can make your query results more readable and meaningful. Here are 
+detailed examples:
+
+Example 1: Alias for a Column
+To give a temporary name to the fish_id column:
+
+SELECT fish_id AS id, name
+FROM fish;
+In this query, fish_id is temporarily renamed to id for the duration of the query.
+
+Example 2: Alias with Spaces
+To include spaces in the alias name, you can use double quotes:
+SELECT fish_id AS "fish id", name
+FROM fish;
+
+Benefits of Using Aliases:
+1.Improves Readability: Makes column names more descriptive and easier to understand.
+2.Handles Name Conflicts: Useful when joining tables with columns of the same name.
+3.Simplifies Complex Expressions: Makes complex expressions or calculations easier to reference.
+
