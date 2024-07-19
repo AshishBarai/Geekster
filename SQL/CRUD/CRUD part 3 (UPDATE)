@@ -1,0 +1,49 @@
+# About CRUD part 1 (UPDATE)
+
+CRUD command
+
+C: CREATE
+R: READ
+U: UPDATE
+D: DELETE
+
+# About the UPDATE Command in CRUD:(Modifiy Existing data)
+UPDATE command is used to modify existing data in table. It allows you to change 
+the values of one or more rows in a table.
+
+# Key componets of the UPDATE command:
+UPDATE: Specifies the table to be updated.
+SET: Specifies the columns and the new values
+WHERE: Specifies which rows to update, without it all rows will be updated.
+
+Example:
+UPDATE fish
+SET breed = "octopus"
+WHERE breed = "koi";
+* UPDATE fish: Specifies the 'fish' table.
+* SET breed = 'octopus': changes the 'breed' to 'octopus'
+* WHERE breed = 'koi': Only rows where 'breed' is 'koi' will be updated
+
+-- Update Specific name.
+UPDATE fish
+SET name = "dumble"
+WHERE name = "dumbeldore";
+* UPDATE fish: Specifies the 'fish' table.
+* SET name = "dumble": changes the 'name' to 'dumble'
+* WHERE name = "dumbeldore": Only rows where 'name' is 'dumbeldore' will be updated
+
+-- Update Specific Breed for a specific name.
+UPDATE fish
+SET breed = "cat fish"
+WHERE name = "ringo";
+* UPDATE fish: Specifies the 'fish' table.
+* SET breed = "cat fish": changes the 'breed' to 'cat fish'
+* WHERE name = "ringo": Only rows where 'name' is 'ringo' will be updated
+
+-- Update multiple rows.
+UPDATE fish
+SET age = 12
+WHERE breed = "shark";
+* UPDATE fish: Specifies the 'fish' table.
+* SET age = "12": changes the 'age' to '12'
+* WHERE breed = "shark": Only rows where 'breed' is 'shark' will be updated
