@@ -1,0 +1,61 @@
+# About CRUD part 4 (DELETE)
+
+CRUD command
+
+C: CREATE
+R: READ
+U: UPDATE
+D: DELETE
+
+# About the DELETE Command in CRUD:(delete Existing data)
+> The DELETE command is used to remove existing data from a table. This operation 
+affects the data within the table, not the structure of the table itself.
+
+# Deleting Specific rows
+for example if we want to delete To delete specific rows based on a condition, we can 
+use the DELETE command with a WHERE clause.
+DELETE 
+FROM fish
+WHERE name = "ringo";
+DELETE FROM fish: Specifies the fish table.
+WHERE name = "ringo": Deletes rows where the name is "ringo".
+
+# To remove all rows from a table while keeping the table structure intact, you omit 
+the WHERE clause.
+DELETE 
+FROM fish;
+This command deletes all the data from the fish table, but the schema (table structure) 
+remains intact.
+
+
+# FOR example Queries: 
+
+> Delete specific age:
+DELETE 
+FROM fish
+WHERE age = 4;
+DELETE FROM fish: Specifies the fish table.
+WHERE age = 4: Deletes all rows where the age is 4.
+
+> Delete Based on condition:
+DELETE
+FROM fish
+WHERE fish_id = age;
+DELETE FROM fish: Specifies the fish table.
+WHERE fish_id = age: Deletes all rows where the fish_id is equal to age.
+
+> Delete all fish data
+DELETE 
+FROM fish;
+This command deletes all rows in the fish table but keeps the table schema intact.
+
+Checking Table Stucture:
+DESC fish;
+DESC fish: Displays the structure of the fish table, including column names, data types, 
+and constraints.
+
+KEY POINTS:
+> The DELETE command removes data but not the table structure.
+> Use the WHERE clause to specify conditions for deletion.
+> Omitting the WHERE clause deletes all rows in the table.
+> The table schema remains intact after a DELETE operation.
