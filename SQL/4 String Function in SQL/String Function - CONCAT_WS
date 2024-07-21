@@ -1,0 +1,14 @@
+# SQL String Function - CONCAT_WS (Word Seperator)
+
+The 'CONCAT_WS' function in SQL is a useful tool for concatenating strings with a specified 
+separator between each string. This function is particularly handy when you want to join 
+multiple columns with a specific delimiter.
+
+
+# Using CONCAT_WS to Combine Book Titles and Author Names
+The 'CONCAT_WS' function allows you to join multiple strings together with a specified 
+separator. In this example, we combine the title, author_fname, and author_lname columns 
+from the books table to create a descriptive string for each book.
+
+SELECT CONCAT_WS(' - ',title,author_fname,author_lname) AS book_title
+FROM books;
