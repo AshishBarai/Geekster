@@ -1,0 +1,55 @@
+# SQL String Function - SUBSTRING
+
+The SUBSTRING function in SQL is used to extract a specific portion of a string. 
+This function is highly useful when you need to retrieve a segment of a string based 
+on its position and length.
+
+# How SUBSTRING Works
+The SUBSTRING function takes three arguments:
+
+1.The string from which to extract the substring.
+2.The starting position of the substring.
+3.The length of the substring to be extracted.
+
+Basic Syntax
+SUBSTRING(string, start_positino, length);
+
+SELECT SUBSTRIN('Hello World', 1,4);
+Here the out outout would be:
+  Hell
+
+SELECT SUBSTRIN('Hello World', 3,8);
+Here the out outout would be:
+  llo Worl
+
+SELECT SUBSTRIN('Hello World', 7);
+Here the out outout would be:
+  World
+
+SELECT SUBSTRIN('Hello World', -3);
+Here the out outout would be:
+  rld
+
+SELECT SUBSTRIN('Hello World', 7,6548614);
+Here the out outout would be:
+  World
+
+Example From DataBase:
+SELECT SUBSTRING(title,1,10)
+FROM books;
+Explanation:
+
+>SUBSTRING(title, 1, 10): This extracts the first 10 characters from the title column in 
+the books table.
+>The result will be a list of book titles truncated to the first 10 characters.
+
+SELECT CONCAT(SUBSTRING(title,1,10),'...') as Title
+FROM books;
+Explanation:
+
+>SUBSTRING(title, 1, 10): Extracts the first 10 characters from the title column.
+>CONCAT(SUBSTRING(title, 1, 10), '...'): Concatenates the extracted substring with an 
+ellipsis.
+>AS Title: Provides an alias for the resulting concatenated string, making the output 
+column name Title.
+
