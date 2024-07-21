@@ -1,0 +1,14 @@
+# SQL String Function - CONCAT
+
+# In SQL, the 'CONCAT' function is a powerful tool for combining multiple strings into one. 
+This can be particularly useful for creating full names from separate first and last name 
+columns in a table.
+
+For Example:
+Using Concat to combine First and Last Names
+The 'Concat' functions allows us to join strings together. In this example, we combine the 
+'author_fname' and 'author_lname' columns from the 'books' table to creat a full name for each
+author
+
+SELECT CONCAT(author_fname,' ',author_lname) AS full_name
+FROM books;
