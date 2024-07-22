@@ -1,1 +1,21 @@
 # SQL String Function - REPLACE
+
+In SQL, the 'REPLACE' function is used to substitute all occurences of as specified substring
+within a string with another substring. It is a case-sensitive function, meaning it distinguished
+between uppercase and lowercase characters.
+
+Basic Syntax
+REPLACE(string, old_substring, new_substring)
+
+Example:
+SELECT ('Hello World', 'Hell', 'Y') AS string;
+Outout: 'Yo World'
+Explanation:
+>'Hello World': The original string.
+>'Hell': The substring to be replaced.
+>'Y': The new substring that will replace 'Hell'.
+>Result: The substring 'Hell' is replaced with 'Y'.
+
+
+SELECT CONCAT(SUBSTRING(REPLACE(title,'e',3), 1, 10), '...') AS Title
+FROM books;
