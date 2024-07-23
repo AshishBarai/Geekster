@@ -1,0 +1,19 @@
+# SQl String Funcition - CHAR_LENGTH
+The CHAR_LENGTH function in SQL returns the length of a string (in terms of the number of 
+characters). This function is useful for evaluating the length of text data stored in your 
+database.
+
+It will directly return the length of the character
+
+SELECT CHAR_LENGTH('Hello World');
+Outout: 11
+In this example, the string 'Hello World' has 11 characters, including the space.
+
+# Practical Use case - Evaluating Title Lengths
+Suppose you have a tabke of books and you want to find out the length of each books title.
+We can use the 'CHAR_LENGTH' function to accomplish this.
+
+SELECT author_lname, title, CHAR_LENGTH(title) Title_length 
+FROM books;
+
+#Database #SQL #MySQL #DatabaseManagement #DataAnalyst #DBMS #TechEducation #TechSkills
