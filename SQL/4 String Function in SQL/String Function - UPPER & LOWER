@@ -1,0 +1,28 @@
+# SQL String Function - UPPER & LOWER
+
+# For UPPER Function 
+ The UPPER function in SQL is used to convert all characters in a string to uppercase. 
+ This can be particularly useful when you want to standardize the case of text data for 
+ comparisons or display purposes
+ Example:
+ SELECT UPPER('Hello World') AS upper_case;
+ OUTPUT: HELLO WORLD
+ In this example, the string 'Hello World' is converted to all uppercase letters, 
+ resulting in 'HELLO WORLD'.
+
+ # For LOWER Function
+The LOWER function in SQL is used to convert all characters in a string to lowercase. 
+This is useful for ensuring consistency in text data, especially when performing 
+case-insensitive comparisons.
+ Example:
+ SELECT LOWER('Hello World') AS lower_case;
+ OUTPUT: hello world
+ In this example, the string 'Hello World' is converted to all lowercase letters, 
+ resulting in 'hello world'.
+
+# Practical Use Case - Converting Book Titles to Lowercase
+Suppose we have a table of books and we want to convert all book titles to lowercase. 
+We can use the LOWER function to achieve this.
+ 
+SELECT LOWER(title) 
+FROM books;
