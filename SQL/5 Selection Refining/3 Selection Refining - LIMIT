@@ -1,0 +1,52 @@
+# SQL - Selection refining - LIMIT
+
+# Understanding LIMIT
+The 'LIMIT' clause helps to retrict the number of rows returned in the result set. This 
+particularly useful when we want to fetch the top records from a table, either for analysis
+or to improve performance by limit the amount of data processed and returned..
+
+# Syntax of LIMIT
+SELECT column1, column2, ...
+FROM table_name
+LIMIT number_of_rows;
+> number_of_rows This specifies the maximum number of rows to return.
+
+# Example 1: Basic Usages of LIMIT
+SELECT title
+FROM books
+LIMIT 3;
+In this example, the query returns the top 3 titles from the 'book' table. Since there is 
+no specific condition, it simply fetches the first 3 records based on the defaul ordering of 
+the table.
+
+# Example 2: Using LIMIT with ORDER BY
+SELECT title, released_year
+FROM books
+ORDER BY released_year DESC
+LIMIT 3;
+In this query, we combine the 'LIMIT' clause with the 'ORDER BY' clause. Here, the query sorts
+ the books by 'released_year' in decending order (i.e., from the most recent to the oldest)
+ and then returns the top 3 latest books.
+
+# Practical Applications
+> Top-N analysis: fetching the top N records, such as the top 5 highest scores, top 10 latest
+tansactions, etc.
+> Pagination: Implementing pagination in application to display a subset of data on each page.
+
+#Example Use Case
+> Top 5 Highest salaries:
+SELECT employee_name, salary
+FROM employee
+ORDERS BY salary DESC
+LIMIT 5;
+
+> Top 10 Recent Ordes:
+SELECT order_id, order_date
+FROM orders
+ORDER BY order_date DESC
+LIMIT 10;
+
+By understanding nd utilizing the 'LIMIT' clause, we can make our SQL queries more efficient 
+and tailored to our specific needs.
+
+#Database #SQL #MySQL #DataManagement #QueryOptimization #TechEducation #DataAnalyst #DBMS #TechSkills
