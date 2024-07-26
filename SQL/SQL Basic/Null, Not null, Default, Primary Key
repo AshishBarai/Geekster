@@ -1,34 +1,51 @@
 # About Null, Not null, Default, Primary Key
+When creating and managing tables in SQL, understanding constaints like 'NULL', 'NOT NULL',
+'DEFAULT', and 'PRIMARY KEY' is crucial for ensuring data integrity and consistency. The 
+constraints define how data can be stored and managed within a table.
 
 # Null values
+By default, columns in SQL accept 'NULL' values, which means they can left empty.
+
 create table beautiful_people
 (
 name VARCAHR(100),
 age INT
 );
-In this query, the name and age columns can accept NULL values, meaning they can be 
-left empty.
+
+> In this query, the name and age columns can accept NULL values, meaning they can be 
+left empty when inserting data.
 
 
 # Not Null values
+The 'NOT NULL' constraint ensures that a columns cannot be left empty, we must provide a value
+for these columns when inserting data.
+
 CREATE TABLE beautiful_people
 (
 name VARCHAR(100) NOT NULL,
 age INT NOT NULL
 );
-This query ensures that both name and age columns cannot be left empty. You must 
+
+> This query ensures that both name and age columns cannot be left empty. We must 
 provide values for these columns when inserting data.
 
 # Default values
+The 'DEFAULT' constraint sets a default values for a column if no value is provided during 
+data insertion.
+
 CREATE TABLE beautiful_people
 (
 name VAHRCHAR(100) DEFAULT "no name provided',
 age INT DEFAULT "101"
 );
+
 This query sets default values for name and age if no values are provided during data 
 insertion. Here, the default value for name is 'no name provided' and for age is 101.
 
 # Primary Key
+A 'PRIMARY KEY' uniquely identifies each records in the table. It ensures that each value in
+the primary key columns is unique and not 'NULL'.
+
 CREATE TABLE beautiful_people
 (
 people_id INT NOT NULL,
@@ -42,7 +59,10 @@ for example: If we take the username on Instagram, we cannot create multiple acc
 with the same name. This means Instagram requires each username to be unique, functioning 
 as a primary key. Here, the data won't be null and will never be redundant.
 
-we can also use auto increment
+# Primary key with AUTO_INCREMENT:
+The 'AUTO_INCREMENT' attribute automatically generates a unique values for the primary key
+columns for each new records.
+
 CREATE TABLE beautiful_people
 (
 people_id INT NOT NULL AUTO_INCREMENT,
@@ -66,9 +86,16 @@ PRIMARY KEY (id)
 );
 This table definition combines NOT NULL, DEFAULT, AUTO_INCREMENT, and PRIMARY KEY 
 constraints to create a robust table structure for employee data.
+> 'id': Must have a value, cannot be NULL, is auto-incremented, and is the primary key.
+> 'last_name' and 'first_name': Must have values, cannot be NULL.
+> 'middle_name': Can be NULL.
+> 'age': Must have a value, cannot be NULL.
+> 'current_status': Defaults to 'employed' if no value is provided.
 
 Explanations:
 NULL: Allows a column to have no value.
 NOT NULL: Ensures a column must have a value.
 DEFAULT: Sets a default value for a column if no value is provided.
 PRIMARY KEY: Uniquely identifies each record in a table and cannot be NULL.
+
+#Database #SQL #MySQL #DataManagement #TechEducation #DataAnalyst #DBMS #TechSkills #DataIntegrity
