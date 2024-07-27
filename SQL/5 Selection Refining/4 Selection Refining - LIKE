@@ -1,0 +1,46 @@
+SQL Selection Refining - LIKE
+
+# Understanding LIKE:
+> The LIKE keywords is used in SQL to search for a specified pattern in a column. It is 
+often used with wildcard to create more fleible search conditions.
+
+# Wildcard is LIKE
+> '%': Represent zero, one, or multiple characters.
+> '_': Represent single characters
+
+Example:
+> '%ing%: Matches any string ending or starting with 'ing', such as 'King', 'living', or 'Anything'.
+> '_ing': MAtches any string with one characters before 'ing', such as 'King', 'sing'
+
+# Syntax
+SELECT column1, column2, columnc3, ...
+FROM books
+WHERE column_name
+LIKE pattern;
+or
+SELECT column1, column2, columnc3, ...
+FROM books
+WHERE coloumn_name
+LIKE pattern;
+
+
+# Example 1: Using '%'
+SELECT title, CONCAT(author_fname, ' ', author_lname) AS author_name
+FROM books
+WHERE author_fname LIKE '%da';
+This query will return all rows where 'author_fname' ends with 'da'.
+
+# Example 2: Using '_'
+SELECT title, CONCAT(author_fname, ' ', author_lname) AS author_name
+FROM books
+WHERE author_fname LIKE 'da_';
+This query will return all rows where author_fname is exactly three characters long and starts with 'da'.
+
+# Example 3: Using '%' for partial matches
+SELECT title, CONCAT(author_fname, ' ', author_lname) AS author_name
+FROM books
+WHERE author_fname LIKE '%da%';
+This query will return all rows where author_fname contains 'da' anywhere in the string.
+
+#Database #SQL #MySQL #DataManagement #TechEducation #DataAnalyst #DBMS #TechSkills #DataIntegrity #LIKEFunction #SQLQueries
+Special thanks to Krishna Madan at Geekster for his invaluable teaching and guidance.
