@@ -32,10 +32,13 @@ Using the WHERE Clause:
 The WHERE clause is used to filter records based on specific conditions.
 
 To select all columns where the age is 4:
-SELECT * FROM fish
+SELECT * 
+FROM fish
 WHERE age = 4;
 
-SELECT * FROM fish
+To select all columns where the name is "egg":
+SELECT * 
+FROM fish
 WHERE name = "egg";
 
 The WHERE clause filters the rows according to the given condition. It is also case
@@ -64,3 +67,4 @@ Benefits of Using Aliases:
 2.Handles Name Conflicts: Useful when joining tables with columns of the same name.
 3.Simplifies Complex Expressions: Makes complex expressions or calculations easier to reference.
 
+#SQL #Database #CRUD #DataManagement #TechSkills #SQLQueries #LearnSQL #DataRetrieval #Geekster #TechEducation #Programming #DataScience #DataAnalyst
