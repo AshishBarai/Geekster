@@ -1,0 +1,40 @@
+# 5 Selection Refining - Challenges
+
+-- Q 1: Select all story collection titles that contain 'stories'.
+SELECT Title
+FROM books
+WHERE title
+LIKE '%stories%';
+
+-- Q 2: Find the longest book, print out the title and page count.
+SELECT title, pages
+FROM books
+ORDER BY pages DESC
+LIMIT 1;
+
+-- Q 3: Print a summary containing the title and year, for the 3 most recent books.
+SELECT CONCAT(title,'-',released_year) AS SUMMARY
+FROM books
+ORDER BY released_year DESC
+LIMIT 3;
+
+-- Q 4: Find all books with an author_lname that contains a spance(" ").
+SELECT title, author_lname
+FROM books
+WHERE author_lname
+LIKE '% %';
+
+-- Q 5: Find the books with the lowest stock, with title, year, stock.
+SELECT title, released_year, stock_quantity
+FROM books
+ORDER BY stock_quantity
+LIMIT 3;
+
+-- Q 6: Print title and author_lname, sorted first, by author_lname and then by title.
+SELECT title, author_lname
+FROM books
+ORDER BY author_lname , title; 
+
+-- Q 7: Sorted Alphabetically by last name.
+SELECT CONCAT('MY FAVORITE AUTHOR IS', ' ', UPPER(author_fname),' ', UPPER(author_lname),' ', '!') AS YELL
+FROM books;
