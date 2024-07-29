@@ -47,3 +47,5 @@ WHERE breed = "shark";
 * UPDATE fish: Specifies the 'fish' table.
 * SET age = "12": changes the 'age' to '12'
 * WHERE breed = "shark": Only rows where 'breed' is 'shark' will be updated
+
+#SQL #Database #CRUD #DataManagement #TechSkills #SQLQueries #LearnSQL #DataScience #DataAnalyst #Programming #TechEducation #Geekster
