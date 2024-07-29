@@ -1,1 +1,36 @@
 # SQL Aggregate Function - COUNT
+
+# What is an aggregate function ?
+Aggregate functions in SQL allow us to perform calculations on multiple 
+rows of similar data and return a single result. They are often used with 
+the GROUP BY clause to group rows that share a common value.
+
+# About COUNT
+The count function in SQL counts the numbers of rows in a table or the number of NON-NULL
+values in a specified column.
+
+Syntax
+SELECT COUNT(*)
+FROM table_name;
+This Query counts the total number of rows in the table and returns the count.
+
+Example:
+> Counting all rows in the table:
+SELECT COUNT(*)
+FROM books;
+This query returns the total number of rows in the books table.
+
+> Counting specific columns:
+SELECT COUNT(author_fname, author_lname)
+FROM books;
+This query counts the number of rows where both author_fname and author_lname are not NULL
+in the books table.
+
+> Counting rows with a specific condition:
+SELECT COUNT(*) 
+FROM books
+WHERE title
+LIKE '%the%';
+This query returns the count of rows where the title contains the word 'the'.
+
+#SQL #Database #AggregateFunctions #DataManagement #TechSkills #SQLQueries #LearnSQL #DataScience #DataAnalyst #Programming #TechEducation #Geekster
