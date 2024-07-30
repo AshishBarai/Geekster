@@ -1,0 +1,29 @@
+# SQL Aggregation function - MIN/MAX
+
+Understanding MIN and MAX functions
+
+MIN function: Returns the minimum value from a set of values.
+MAX function: Returns the maximum value from a set of values.
+
+# Syntax
+SELECT MIN(column_name)
+FROM table_name;
+
+SELECT MAX(column_name)
+FROM books;
+
+# Example:
+1. Using the MAX function:
+To find the most recent release year in the books table:
+SELECT MAX(released_year)
+FROM books;
+
+2. Using the MIN function:
+To found the earliest release year in the books table:
+SELECT MAX(released_year)
+FROM books;
+
+These functions are essential for quickly identifying the range of values within our dataset,
+such as teh oldest and newest entries.
+
+#SQL #Database #DataManagement #TechSkills #SQLQueries #LearnSQL #DataScience #DataAnalyst #Programming #TechEducation #Geekster
