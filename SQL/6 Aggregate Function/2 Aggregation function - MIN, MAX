@@ -1,9 +1,9 @@
 # SQL Aggregation function - MIN/MAX
 
-Understanding MIN and MAX functions
+# Understanding MIN and MAX functions
 
-MIN function: Returns the minimum value from a set of values.
-MAX function: Returns the maximum value from a set of values.
+> MIN function: Returns the minimum value from a set of values.
+> MAX function: Returns the maximum value from a set of values.
 
 # Syntax
 SELECT MIN(column_name)
