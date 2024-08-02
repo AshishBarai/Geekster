@@ -1,0 +1,35 @@
+# SQL Aggregate function - Subquery
+
+# Understating Subquery
+A subquery, also known as an innner query or nested query, is a query within another SQL query.
+The subquery is executed first, and its result is used by the outer query.
+
+Syntax:
+SELECT col1, col2, ...
+FROM table_name
+WHERE column_name IN (SELECT column_name FROM  table_name WHERE condition);
+
+Example:
+To select all columns from the 'books' tabke where the number of pages is the minimum value
+found in the table:
+SELECT * 
+FROM books
+WHERE PAGES IN (SELECT MIN(pages) FROM books);
+
+Explanation:
+1. subquery execution:
+SELECT MIN(pages) FROM books;
+This subquery retrieves the minmum number of pages from the 'books' table.
+
+2. Outer Query Execution:
+SELECT * FROM books WHERE pages IN (subquery_result);
+
+The outer query uses the result of the subquery to filter and select rows where the number 
+of pages matches the minimum value found.
+
+When to use subqueries:
+> When you need to perform multiple steps of data retrieval.
+> When you want to filter results based on the outcome of another query.
+> For breaking down complex query into more manageable parts.
+
+#SQL #Database #Subquery #DataManagement #TechSkills #SQLQueries #LearnSQL #DataScience #DataAnalyst #Programming #TechEducation #Geekster
