@@ -1,0 +1,23 @@
+# SQL Aggregate function - SUM with GROUP BY
+
+# Understating SUM
+The SUM function calculates the total sum of a numeric column. This can be useful for summarizing data, such as finding the total stock quantity of books.
+
+Syntax
+SELECT SUM(stock_quantity)
+FROM table_name;
+
+# Using SUM with GROUP BY
+SELECT SUM(stock_quntity) 
+FROM books;
+This query returns the total stock quantity of all books in the books table.
+
+# WITH GROUP BY
+The GROUP BY clause groups rows that have the same values into summary rows. This is often used with aggregate functions to perform calculations on each group.
+SELECT aurhor, SUM(stock_quntity)
+FROM books
+GROUP BY author
+This query returns the total stock quantity for each author, providing a summary of how many books each author has in stock.
+
+#SQL #Database #DataManagement #TechSkills #SQLQueries #LearnSQL #DataScience #DataAnalyst #Programming #TechEducation #Geekster #InventoryManagement #Bookstore
+
