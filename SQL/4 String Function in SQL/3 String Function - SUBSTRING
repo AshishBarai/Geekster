@@ -38,7 +38,6 @@ Example From DataBase:
 SELECT SUBSTRING(title,1,10)
 FROM books;
 Explanation:
-
 >SUBSTRING(title, 1, 10): This extracts the first 10 characters from the title column in 
 the books table.
 >The result will be a list of book titles truncated to the first 10 characters.
@@ -53,3 +52,5 @@ ellipsis.
 >AS Title: Provides an alias for the resulting concatenated string, making the output 
 column name Title.
 
+Hashtags:
+#SQL #Database #DataManagement #TechSkills #SQLQueries #LearnSQL #DataScience #DataAnalyst #Programming #TechEducation #Geekster #StringFunctions #BookDatabase #SUBSTRING
