@@ -19,3 +19,10 @@ Explanation:
 
 SELECT CONCAT(SUBSTRING(REPLACE(title,'e',3), 1, 10), '...') AS Title
 FROM books;
+Explanation:
+> REPLACE(title, 'e', '3'): Replaces all occurrences of the letter 'e' with '3' in the title column.
+> SUBSTRING(REPLACE(title, 'e', '3'), 1, 10): Extracts the first 10 characters from the modified title.
+> CONCAT(..., '...'): Concatenates the extracted substring with '...'.
+> AS modified_title: Provides an alias for the resulting concatenated string, making the output column name modified_title.
+
+#SQL #Database #DataManagement #TechSkills #SQLQueries #LearnSQL #DataScience #DataAnalyst #Programming #TechEducation #Geekster #StringFunctions #ReplaceFunction #BookDatabase
