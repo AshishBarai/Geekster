@@ -1,0 +1,22 @@
+# SQL Aggregate function - AVG & AVG with GROUP BY
+
+# Understanding AVERAGE
+What is average ?
+Average is calculated by dividing the total quantity by the count of observations.
+
+Basic Syntax:
+To calculate the average in SQL, we can use the AVG function:
+SELECT col1, AVG(col2), col3, ...
+FROM books
+GROUP BY col1;
+
+Example:
+SELECT released_year, AVG(stock_quantity)
+FROM books
+GROUP BY released_year;
+Explanation:
+> SELECT released_year, AVG(stock_quantity): Selects the year of release and calculates the average stock quantity for each year.
+> FROM books: Specifies the books table.
+> GROUP BY released_year: Groups the results by the released_year column, so the average is calculated for each year.
+
+#SQL #Database #DataManagement #TechSkills #SQLQueries #LearnSQL #DataScience #DataAnalyst #Programming #TechEducation #Geekster #AggregateFunctions #BookDatabase #Average
