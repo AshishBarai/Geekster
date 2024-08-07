@@ -1,0 +1,46 @@
+SQL Aggregate Function - Challenge
+
+Challenge Queries and Explanations:
+-- Q Print the number of books in the database
+To get the total number of books in the database, we use the COUNT(*) function:
+SELECT COUNT(*) AS Number_of_books
+FROM books;
+This query returns the total number of rows in the books table.
+
+-- Q Print out how many books were released in each year
+To find out the number of books released each year, we group by the released_year column and count the titles:
+SELECT COUNT(title) AS Number_of_books, released_year
+FROM books
+GROUP BY released_year;
+This groups the books by their release year and counts the number of books in each group.
+
+-- Q print out the total number of books in stock
+To get the total number of books currently in stock, we use the SUM function on the stock_quantity column:
+SELECT SUM(stock_quantity) 
+FROM books;
+This query sums up the stock_quantity for all books in the table.
+
+-- Q Print the average released_year for each author
+To find the average release year for books written by each author, we group by the author's name and calculate the average of the released_year:
+SELECT author_fname as Name, AVG(released_year)
+FROM books
+GROUP BY name;
+This calculates the average release year for books by each author.
+
+-- Q Find the full name of the author who wrote the longest books
+To identify the author of the book with the most pages, we use ORDER BY to sort the books by the number of pages in descending order and then limit the result to the top entry:
+SELECT CONCAT(author_fname,' ', author_lname) as Name, pages
+FROM books
+GROUP BY Name, pages
+ORDER BY pages DESC
+LIMIT 1;
+This returns the full name of the author who wrote the book with the highest page count.
+
+-- Q Output the year, the number of books, and the average number of pages per book
+To get the number of books and the average number of pages per book for each year, we group by released_year and use the COUNT and AVG functions:
+SELECT released_year AS Year, COUNT(*) AS "# Books", avg(pages) AS "avg pages"
+FROM books
+GROUP BY released_year;
+This groups the books by their release year and provides the count and average number of pages for each year.
+
+#SQL #Database #DataAnalysis #DataScience #SQLQueries #TechSkills #DataManagement #LearnSQL #Programming #TechEducation #Geekster #AggregateFunctions #SQLChallenge #BooksDatabase
