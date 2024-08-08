@@ -1,0 +1,31 @@
+# Revisiting the data types Char Vs Varchar
+
+# Char Vs Varchar
+
+# CHAR:
+> Fixed Length: CHAR will always have a fixed length.
+> Performance: CHAR is faster if we know the length of the characters
+
+Example Use Cases:
+> State Abbreviation: DL(Delhi), UP(Utter Pradesh), NY(New York) - each having 2 characters.
+> Gender: M(male) and F(Female).
+When to use CHAR:
+> whenever we know there is going to be fixed length character, we use CHAR for faster performance.
+
+# VARCHAR:
+> Variable Length: VARCHAR stores variable characters and does not store any fixed values.
+> Flexibility: Use VARCHAR when the length of the characters is unknown.
+Example Use Case:
+> address
+> email
+
+# Space Considerations:
+> CHAR(5): This will store 5 bytes of space for every data entry, even if we are using only 1 or 3 characters like M (Male)/F (Female) or Yes/No.
+> VARCHAR(100): This will store space according to the need. For example, if we use the name 'Ashish' which has 6 characters, it will take up 6 bytes of space only.
+
+# Summary: 
+> Use CHAR for fixed length data to imporve performance.
+> Use VARCHAR for variable length data to save space
+
+#SQL #Database #DataTypes #DataAnalysis #TechSkills #CharVsVarchar #Programming #TechEducation #Geekster #DataStorage #PerformanceOptimization
+
