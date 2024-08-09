@@ -1,0 +1,39 @@
+# SQL Revisiting Data types - Decimal (M,D)
+
+ # Formate Decimal(M,D)
+
+The DECIMAL(M, D) data type in SQL is used to store numeric values with fixed precision and scale.
+
+# Understanding the Parameters:
+> M: Represents the total number of digits (precision). The range for M is 1 to 65 digits.
+> D: Represents the number of digits to the right of the decimal point (scale). The range for D is 0 to 30.
+Rule: M must always be greater than or equal to D.
+
+Creating a Table with DECIMAL:
+CREATE TABLE items(price DECIMAL(4.3));
+Here, DECIMAL(4, 3) means:
+
+Precision (M): 4 digits total.
+Scale (D): 3 digits after the decimal point.
+
+Example:1
+INSERT INTO items(price)
+VALUES(3);
+Output would be 3.000 since the precision is set to 4 and scale to 3, the output will have one digit before the decimal and three zeros after it.
+
+Example 2:
+INSERT INTO(price)
+VALUES(43215);
+Outout would be Error
+Sine The value 43215 exceeds the maximum allowed precision of 4 digits, so it throws an error.
+
+Example 3:
+INSERT INTO(price)
+VALUES(285.99)
+Output would be 286.00 as the value 285.99 rounds up to 286.000 due to the precision and scale settings.
+
+Key Points:
+> DECIMAL(M, D) is ideal for storing precise financial data where exact decimal representation is needed.
+> Always ensure that the value being inserted does not exceed the defined precision.
+
+#Database #SQL #MySQL #DataTypes #Decimal #DatabaseManagement #TechEducation
