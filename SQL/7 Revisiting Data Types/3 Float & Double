@@ -1,0 +1,40 @@
+# SQL Revisiting Datatypes - Float and Double
+
+When dealing with large numbers or decimal values in SQL, FLOAT and DOUBLE are two data types that allow you to store these values with varying degrees of precision. These types are particularly useful when you need to manage large ranges of values while minimizing storage space, but they come with trade-offs in terms of precision.
+
+# Key Difference between FLOAT and DOUBLE:
+> FLOAT: Requires 4 bytes of memory. However, it only offers precision up to approximately 7 digits. This means that while you save space, the accuracy of the stored value may be compromised, especially with very large numbers or numbers requiring high precision. 
+> DOUBLE: Requires 8 bytes of memory and provides precision up to about 15 digits. While it consumes more memory than FLOAT, it offers significantly better accuracy, making it suitable for scenarios where precision is critical.
+
+Practial Example:
+# Using 'FLOAT'
+CREATE TABLE things 
+(price FLOAT);
+
+INSERT INTO things(price)
+VALUES (8877665544.45);
+
+then the output would be 8877670000.00,In this case, the original value 8877665544.45 is stored as 8877670000.00. This demonstrates the precision issue with FLOAT, where the value is approximated, leading to a loss of accuracy.
+
+Using 'DOUBLE':
+CREATE TABLE thing
+(price DOUBLE);
+
+INSERT INTO things(price)
+VALUES (8877665544.45)
+then output would be 8877665544.45 Here, the DOUBLE data type retains the original value 8877665544.45 accurately, highlighting its advantage in maintaining precision over a larger number of digits.
+
+# When to Use FLOAT vs. DOUBLE:
+> Use FLOAT when memory efficiency is more critical than precision. It is ideal for applications where approximate values are acceptable, such as in graphics processing or scientific calculations with large datasets where exact numbers aren't crucial.
+> Use DOUBLE when precision is paramount, such as in financial calculations, scientific data analysis, or any scenario where the exact value of the number is essential.
+
+# Additional Considerations:
+> Rounding Errors: Both FLOAT and DOUBLE can lead to rounding errors due to their nature of storing approximations. This is important to keep in mind when performing operations that require high accuracy.
+> Consistency: When dealing with multiple systems or different database engines, be aware that the implementation of FLOAT and DOUBLE might differ slightly, leading to inconsistencies in precision.
+
+Summary:
+While FLOAT and DOUBLE allow you to store large numbers efficiently, they do so at the potential cost of precision. Choose the appropriate type based on your application's need for memory efficiency versus precision.
+
+
+#Database #SQL #DataTypes #FloatVsDouble #DataPrecision #TechEducation #Coding #DataScience
+
