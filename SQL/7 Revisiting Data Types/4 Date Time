@@ -1,2 +1,47 @@
 #SQL Revisiting Data Types - Date Time
 
+In SQL, managing date and time values is crucial for handling temporal data effectively.
+Understanding the various data types and function related to date and time can help you store,
+query, and manipulate such data accurately.
+
+# DATA function: Valus with a Date But no Time
+> Format: 'YYYY-MM-DD'
+> Description: The 'DATE' data types is used to store date values without any accociated time.
+This is ideal for feilds where only the date is important, such as birthdates or event dates.
+
+# TIME Function: Values with Time but No Date
+> Formart: 'HH:MM:SS'
+> Description: The 'TIME' data type stores time values without an associated date. This is 
+useful for fields that track time-specific data, like hours worked or time of an 
+appointment.
+
+# DATETIME values with a Date AND TIME
+> Format: 'YYYY-MM-DD HH:MM:SS'
+> The DATETIME data type combines both date and time into a single value. This is 
+perfect for timestamping events that require precise tracking of both the date and the 
+exact time, such as logging transactions or recording events.
+
+Practical Examples: 
+Inserting values with DATE, TIME, and DATETIME
+INSERT INTO datepeople(name, birth_date, birth_time, birth_date_time)
+VALUES('AJ','1999-12-11','12:30:23','1999-08-20 12:30:23');
+Explanation:
+> '1999-12-11': The birth date without any time.
+> '12:30:23': The birth time without any date.
+> '1999-08-20 12:30:23': A complete datetime value that includes both date and time.
+
+# Current DATE and TIME functions:
+> CURDATE(): Returns the current date.
+> CURTIME(): Retruns the currect time.
+> NOW(): Returns the currect date and timee.
+
+Inserting Current Date, Time, and DateTime
+INSERT INTO datepeople (name, birth_date, birth_time, birth_date_time)
+VALUES ('sahil',CURDATE(),CURTIME(), NOW());
+Explanation:
+> CURDATE(): Inserts the current date.
+> CURTIME(): Inserts the current time.
+> NOW(): Inserts both the current date and time.
+
+#SQL #DateTime #DatabaseManagement #TechSkills #Coding #Database #MySQL #DataAnalyst
+
