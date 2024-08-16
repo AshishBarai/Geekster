@@ -1,4 +1,11 @@
 #SQL Revisting Datatypes - Formating Dates
 
-Understanding dates functions in SQL
 
+
+SELECT Name, birth_date, DAY(birth_date)
+FROM datepeople;
+
+SELECT Name, birth_date, DAYNAME(birth_date)
+FROM datepeople;
+
+Link for documentation: https://dev.mysql.com/doc/refman/5.7/en/date-and-time-functions.html
