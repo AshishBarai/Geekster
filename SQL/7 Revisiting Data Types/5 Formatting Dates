@@ -1,6 +1,6 @@
 #SQL Revisting Datatypes - Formating Dates
 
-
+(to be updated)
 
 SELECT Name, birth_date, DAY(birth_date)
 FROM datepeople;
