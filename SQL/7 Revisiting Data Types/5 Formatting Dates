@@ -1,11 +1,38 @@
 #SQL Revisting Datatypes - Formating Dates
 
-(to be updated)
+In SQL, formating and manipulating date values is essential for displaying and analyzing temporal data effectively. SQL Provides a variety of functions that allows us to extract specific parts of a date, format it in different ways, and perform date-related calculation.
 
+1. Extracting Specific parts of a date
+SQL Allows us to extraxt different parts of a date, such as the day, month, or year, using various built-in functions:
+
+> Extracting day:
 SELECT Name, birth_date, DAY(birth_date)
 FROM datepeople;
+> Explanation: This query retrieves the day of the month from the 'birth_date' field.
 
+> Extracting Day Name:
 SELECT Name, birth_date, DAYNAME(birth_date)
 FROM datepeople;
+> Explanation: This query returns the name of the day that is monday, tuesday etc for each birth_date.
 
-Link for documentation: https://dev.mysql.com/doc/refman/5.7/en/date-and-time-functions.html
+2. Custom Date Formating
+Sometimes, we may want to formate date in a more human-readable format or according to speciffic requirements:
+
+> Custom Date Format Example:
+SELECT name, CONCAT(DAY(birth_date), '-', MONTHNAME(birth_date), '-', YEAR(birth_date)) AS DATE
+FROM datepeople;
+> Explanation: This Query combines the day, months name, and year into a custom formatted date string like '11-August-1999'.
+
+3. Using DATE_FORMATE for advanced formating
+The 'DATE_FORMAT' function in SQL is powerful for formating date values according to a specified patterm. It uses format specifiers to define how the date should be displayed:
+
+> Formting Dates with 'DATE_FORMAT':
+SELECT CONCAT(name, ' ',DATE_FORMAT(birth_date, 'was born on %W')) AS birth_day
+FROM datepeople;
+> Explanation: This query combines the day, month name, and year into a custom formatted date string like 11-December-1999.
+
+For a full list of specifiers and their uses, you can refer to the official MySQL documentation: https://dev.mysql.com/doc/refman/5.7/en/date-and-time-functions.html
+
+#SQL #DateTime #DataFormatting #DatabaseManagement #TechSkills #Coding #DataScience #MySQL
+
+
