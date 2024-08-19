@@ -1,0 +1,17 @@
+SQL logical operators - 'OR ||'
+
+The OR operator in SQL is used to combine two or more conditions in a WHERE clause. Unlike the AND operator, which requires all conditions to be true, the OR operator only requires at least one of the conditions to be true for the row to be included in the result set.
+
+Example :1
+SELECT title, author_lname, released_year
+FROM books
+WHERE author_lname = 'Rowling' OR released_year > 2015;
+This query retrieves book titles, author last names, and release years for books where either the author_lname is 'Rowling' or the released_year is greater than 2015. If either of these conditions is true, the record will be included in the results.
+
+Example 2:
+SELECT title, author_lname, released_year
+FROM books
+WHERE author_lname = 'Smith' OR released_year > 2000 || genre = 'Fiction';
+This query selects book titles, author last names, and release years for books that belong to the 'Fiction' genre or were released before 2000 or have 'Smith' as the author’s last name. If any one of these conditions is true, the book will be included in the result set.
+
+#SQL #OR #LogicalOperators #DatabaseManagement #DataFiltering #SQLQueries #MySQL #TechSkills
