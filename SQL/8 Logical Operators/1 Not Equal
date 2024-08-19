@@ -1,1 +1,18 @@
 SQL Logical operators - Not Equal
+
+in simple terms it is a compliment of equal operators
+
+For example:
+SELECT titile
+FROM books
+WHERE released_year = 2017
+ in this example the result will return the values where the released year is 2017 but in 
+not equal to or compliment for equal
+SELECT title
+FROM books 
+WHERE released_year != 2017
+
+Example 2:
+SELECT title, author_fname
+FROM books
+WHERE author_fname != 'David';
