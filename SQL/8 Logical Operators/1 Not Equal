@@ -1,18 +1,27 @@
-SQL Logical operators - Not Equal
+SQL Logical operators - Not Equal ('!=' OR '<>')
 
-in simple terms it is a compliment of equal operators
+The "Not Equal" operator in SQL is used to filter out results that do not match a specified value. It is the complement of the equal (=) operator. In SQL, you can use either != or <> as the "Not Equal" operator.
 
-For example:
+# Understanding the NOT equal Operator
+When you use the "Not Equal" operator, SQL returns all records where the specified column's value does not match the given value.
+
+> For example 1: Filtering Books by released year
 SELECT titile
 FROM books
 WHERE released_year = 2017
- in this example the result will return the values where the released year is 2017 but in 
+
+in this example the result will return the values where the released year is 2017 but in 
 not equal to or compliment for equal
+
 SELECT title
 FROM books 
 WHERE released_year != 2017
+This query returns all book titles where the release year is not 2017. It will exclude any records where the release year is exactly 2017.
 
-Example 2:
+Example 2: Filerting Books by author
 SELECT title, author_fname
 FROM books
 WHERE author_fname != 'David';
+This query returns all titles and authors' first names from the books table where the author's first name is not 'David'. It filters out any records where the author's first name is 'David'.
+
+#SQL #NotEqual #DatabaseManagement #DataFiltering #SQLQueries #TechSkills #DataScience #MySQL
