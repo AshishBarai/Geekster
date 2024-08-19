@@ -1,0 +1,39 @@
+SQL Revisiting Datatypes - Timestamp
+
+The 'TIMESTAMP' datatypes in SQL is used to store both the date and time of an event, typically in the format
+ 'YYYY-MM-DD HH:MM:SS'. It is similar to the 'DATETIME' datatype, but with some key differences, 
+ particulary in how it handles time zones and automatic updates.
+
+# Key Features of 'TIMESTAMP':
+> Date and Time Storage: TIMESTAMP stores both date and time information, making it useful for tracking events down to the second.
+> Automatic Updates: TIMESTAMP columns can automatically update to the current date and time whenever the row is modified. This feature is particularly useful for keeping track of the last update time of a record.
+> Time Zone Awareness: Unlike DATETIME, the TIMESTAMP datatype is time zone-aware. It stores the date and time as UTC (Coordinated Universal Time) and converts it back to the local time zone when retrieved. 
+
+Syntax
+CREATE TABLE events (
+    event_id INT AUTO_INCREMENT PRIMARY KEY,
+    event_name VARCHAR(255),
+    event_timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+# Example 1: Storing a 'TIMESTAMP'
+INSERT INTO events (event_name, event_timestamp)
+VALUES ('Meeting', '2024-08-15 10:30:00');
+
+This will insert a new row into the events table with the specified date and time.
+
+# Example 2: Automatic 'TIMESTAMP' Update
+CREATE TABLE user_logins (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    login_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+In this example, the login_time column will automatically update to the current time 
+every time the row is updated.
+
+# Practical Use Cases
+> Tracking Changes: Use TIMESTAMP to record when a record was last modified. This is particularly useful for logging or auditing purposes.
+> Event Logging: Ideal for applications where you need to track when specific events occur, such as user logins, transactions, or system events.
+> Time Zone Management: Since TIMESTAMP is time zone-aware, it is useful in applications that need to handle data across multiple time zones.
+
+#SQL #TIMESTAMP #DatabaseManagement #DataTypes #TechSkills #MySQL #Coding #DataAnalyst
