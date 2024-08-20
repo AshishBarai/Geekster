@@ -1,0 +1,23 @@
+SQL Relationships - Types of relationships
+
+In relational databases, understanding the different types of relationships between tables is crucial for designing efficient and meaningful data structures. There are three primary types of relationships:
+
+# one to one relationship
+In a one-to-one relationship, each record in one table corresponds to one and only one record in another table. This relationship is often used when you want to split data into multiple tables to reduce redundancy or for security reasons.
+example:
+> country - capital : city Each Counrty has one capital city, and each capital city belongs to only one country.
+> person - their fingerprint : Each person has a unique fingerprint, and each fingerprint is associated with only one person.
+
+# one to many relationship
+In a one-to-many relationship, a single record in one table can be related to one or more records in another table. This is the most common type of relationship in databases.
+Example:
+> country - city : A counrty can have multiple cities, but each city belongs to only one country.
+> parent child: A parent can have multiple children, but each child has only one set of parent.
+
+# many to many relationship
+In a many-to-many relationship, records in one table can relate to multiple records in another table, and vice versa. This type of relationship usually requires a junction table to manage the associations.
+Example:
+> students and counrses: A student can enroll in multible counrses, and each course can have multiple students enrolled.
+> Author and books: An author can write multiple books, and each books can have multiple authors.
+
+#SQL #Database #DataModeling #SQLRelationships #DataAnalysis #TechEducation #DatabaseDesign
