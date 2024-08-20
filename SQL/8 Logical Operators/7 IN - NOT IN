@@ -1,0 +1,28 @@
+SQL Logical Operators - IN / NOT IN 
+
+The IN operator is a shorthand for using multiple OR conditions, while NOT IN is a shorthand for using multiple AND conditions with negation.
+
+Example 1:
+SELECT sale_id, customer_name
+FROM sales
+WHERE customer_name = 'Alice' OR customer_name = 'Bob' OR customer_name = 'Charlie';
+
+With IN Operator:
+Instead of repeating OR, you can use the IN operator:
+
+SELECT sale_id, customer_name
+FROM sales
+WHERE customer_name IN ('Alice', 'Bob', 'Charlie');
+
+This will fetch sales records for customers named Alice, Bob, and Charlie.
+
+With NOT IN Operator:
+If you want to exclude sales records for these customers:
+
+SELECT sale_id, customer_name
+FROM sales
+WHERE customer_name NOT IN ('Alice', 'Bob', 'Charlie');
+
+This will fetch sales records for customers other than Alice, Bob, and Charlie.
+
+#SQL #DataAnalysis #SalesData #LogicalOperators #SQLTips #INOperator #DatabaseManagement #TechSkills
