@@ -1,0 +1,40 @@
+SQL relationship - Primary Key and Foreign Keys
+
+# Understanding Primary Key
+A Primary Key is a unique identifier for each record in a table. It ensures that each record can be uniquely identified, which prevents duplicate rows. The primary key must contain unique values and cannot contain NULL values.
+Key Points:
+> Uniqueness: No Two rows can have the same primary key value.
+> Non - Null: Every row must have a value for the primary key.
+> Single or Composite: A Primary key can consist of a single column or multiple columns
+
+Example:
+> Customer Table: the order_id column can be the primary key, uniquely identifying each other.
+CREATE TABLE customers
+(
+id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+first_name VARCHAR(100) NOT NULL,
+last_name VARCHAR(100) NOT NULL,
+email (100)
+)
+
+# Understanding Foreign Key
+A Foreign Key is a column (or a set of columns) in one table that references the Primary Key in another table. It establishes a relationship between the two tables, ensuring that the value in the foreign key column corresponds to a valid value in the referenced primary key column.
+Ket Points:
+> Referential Integrity: The foreign key ensures that the relationship between tables is maintained, preventing actions that would destroy links between tables.
+> Multiple Foreign Keys: A table can have more than one foreign key, each pointing to a different primary key in different tables.
+
+Example: 
+> Orders table: The customer_id column in the Order table can be a foreign key that reference the customer_id in the Orders table.
+CREATE TABLE orders
+(
+id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+order_date DATE NOT NULL,
+amount DECIMAL(8,2),
+customer_id INT NOT NULL,
+FOREIGN KEY(customer_id) REFERENCES customer(id)
+)
+
+Primary Key: In the Customers table, id would be the primary key, uniquely identifying each customer.
+Foreign Key: In the Orders table, customer_id would be a foreign key, creating a link between Orders and Customers, ensuring each order is associated with a valid customer.
+
+#SQL #Database #DataAnalyst #ForeignKey #PrimaryKey #DataIntegrity #DatabaseDesign #DataModeling #TechEducation
