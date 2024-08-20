@@ -1,0 +1,27 @@
+SQL Logical operators - Between
+
+The BETWEEN operator is useful when selecting a range of values from sales data, such as sales amounts, dates, or product prices. It is inclusive, meaning it includes both the start and end values of the range.
+> Example 1:
+SELECT product_name, sales_date
+FROM sales
+WHERE sales_date BETWEEN '2023-01-01' AND '2023-12-31';
+This query will return all products that were sold within the year 2023, including January 1st and December 31st.
+
+Example 2:
+SELECT product_name, sales_amount
+FROM sales
+WHERE sales_amount BETWEEN 500 AND 1000;
+This query will return all products with sales amounts between $500 and $1000, including both $500 and $1000.
+
+Example 3: and for NOT BETWEEN
+SELECT product_name, sales_amount
+FROM sales
+WHERE sales_amount NOT BETWEEN 500 AND 1000;
+This query will return products where the sales amount is not between $500 and $1000. This is useful if you're looking for sales that are either below $500 or above $1000.
+
+Example 4:
+SELECT product_name, sales_date
+FROM sales
+WHERE sales_date BETWEEN '2023-01-01' AND '2023-01-31';
+
+#SQL #Database #SalesAnalysis #SQLQuery #DataAnalysis #DataScience #TechSkills #MySQL #BusinessIntelligence #Analytics
