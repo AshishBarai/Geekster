@@ -1,0 +1,23 @@
+SQL logical operators - case
+
+The CASE operator is used to replace the traditional IF-THEN-ELSE statement. It allows you to specify conditions, and if a condition is met, it returns the corresponding result; otherwise, it provides an alternative.
+
+Syntax:
+CASE 
+  WHEN ___ THEN ___
+  .
+  .
+  .
+  ELSE END
+
+Example 1:
+SELECT product_name, 
+CASE 
+  WHEN sales_date > '2020-01-01' THEN 'New Product' 
+  ELSE 'Legacy Product' 
+END AS Product_Category
+FROM sales;
+
+This would categorize products as "New Product" if they were sold after January 1, 2020, and "Legacy Product" if sold before that date.
+
+#SQL #Database #DataAnalysis #SQLQueries #SalesData #TechEducation #DataScience #BusinessIntelligence
