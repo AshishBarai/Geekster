@@ -1,0 +1,25 @@
+SQL Relationship - Inner Join
+
+An Inner Join in SQL is used to retrieve rows from two or more tables where there is a match between the columns being joined. It returns only the records that have matching values in both tables. If there is no match, the row is not included in the result set.
+# Key Points:
+> Matching Rows: Only rows with matching values in both tables are returned.
+> Multiple Table: you can perform an inner join on more than two tables.
+> ON Clause: Specifies the condition on which tha table are joined.
+
+# Syntax:
+SELECT columns
+FROM table1
+JOIN table2 ON table1.column = table2.column;
+
+Example: 
+Suppose we have two tables, customers and orders, where customers.id is the primary key in the customers table, and orders.customer_id is a foreign key in the orders table.
+
+SELECT * 
+FROM customers
+JOIN orders ON customers.id = orders.customer_id;
+
+> The query selects the name from the customers table and order_id and order_date from the orders table.
+> The JOIN operation connects the customers table with the orders table where the id in the customers table matches the customer_id in the orders table.
+> Only rows with matching id and customer_id values will appear in the result set.
+
+#SQL #InnerJoin #Database #DataRetrieval #DataAnalysis #TechEducation #SQLQueries #SalesData
