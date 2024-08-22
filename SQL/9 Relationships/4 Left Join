@@ -1,0 +1,27 @@
+SQL Relationship - Left Join
+
+A Left Join (or Left Outer Join) in SQL is used to retrieve all rows from the left table and the matching rows from the right table. If there is no match, the result is still included, but the columns from the right table will contain NULL values.
+
+# Key Points:
+> All Rows from Left Table: The result set includes all rows from the left table.
+> Matching Rows from Right Table: Only the rows with matching values in the right table are included.
+> Non-Matching Rows: For rows in the left table with no corresponding rows in the right table, the result will include NULL for columns from the right table.
+
+Basic syntax:
+SELECT columns
+FROM table1
+LEFT JOIN table2
+ON table1.column = table2.column;
+
+Example:
+Imagine we have two tables, customers and orders. We want to list all customers, including those who have not placed any orders.
+
+SELECT customers.name, orders.order_id, orders.order_date
+FROM customers
+LEFT JOIN orders ON customers.id = orders.customer_id;
+
+> The query selects the name from the customers table and order_id and order_date from the orders table.
+> The LEFT JOIN operation ensures that all customers are listed, even if they haven't placed an order.
+> If a customer has not placed any orders, the order_id and order_date fields will show NULL.
+
+#SQL #LeftJoin #Database #DataRetrieval #DataAnalysis #TechEducation #SQLQueries #SalesData
