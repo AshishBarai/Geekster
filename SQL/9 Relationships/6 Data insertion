@@ -1,0 +1,29 @@
+SQL Relationship - Challenge 1
+
+CREATE SCHEMA geekster_challenge;
+
+USE geekster_challenge;
+
+CREATE TABLE students
+(
+id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+first_name VARCHAR(100)
+);
+
+INSERT INTO students(first_name) VALUES
+('caleb'),
+('Samantha'),
+('Raj'),
+('Carlos');
+SELECT * FROM students;
+
+CREATE TABLE papers
+(
+student_id INT NOT NULL,
+title VARCHAR(100),
+grade INT NOT NULL,
+FOREIGN KEY(student_id) REFERENCES students(id)
+);
+
+INSERT INTO papers(student_id, title, grade) VALUES
+(),
