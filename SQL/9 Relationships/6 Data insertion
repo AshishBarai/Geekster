@@ -1,5 +1,3 @@
-SQL Relationship - Challenge 1
-
 CREATE SCHEMA geekster_challenge;
 
 USE geekster_challenge;
@@ -26,4 +24,10 @@ FOREIGN KEY(student_id) REFERENCES students(id)
 );
 
 INSERT INTO papers(student_id, title, grade) VALUES
-(),
+(1, 'My First Book report', 60),
+(1, 'My Seecond Book report', 75),
+(2, 'Russian Lit Through The Ages', 94),
+(2, 'De Montaigne and The Art of The Essay', 90),
+(4, 'Borges and Magical Realism', 89);
+
+SELECT * FROM papers;
