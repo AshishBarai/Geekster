@@ -1,0 +1,9 @@
+SQL Many to Many Relationship Challenge 8
+
+SELECT s.title AS Title, 
+	r.rating AS Rating, 
+  CONCAT(rs.first_name, ' ',rs.last_name) AS Reviewers
+FROM reviewers AS rs
+JOIN reviews AS r ON rs.id = r.reviewer_id
+JOIN series AS s ON s.id = r.series_id
+ORDER BY title;
