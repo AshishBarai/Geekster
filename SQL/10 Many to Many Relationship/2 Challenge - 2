@@ -1,0 +1,6 @@
+SQL many to many relationship challenge 2
+
+SELECT s.title, r.rating
+FROM series AS s
+LEFT JOIN reviews AS r ON s.id = r.series_id
+ORDER BY s.title;
