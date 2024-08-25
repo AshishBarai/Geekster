@@ -1,0 +1,14 @@
+SQL Many to Many Relationship challenge 7
+
+SELECT s.first_name, s.last_name, 
+	COUNT(r.rating) AS COUNT, 
+    IFNULL(MIN(r.rating),0) AS MIN, 
+    IFNULL(MAX(r.rating),0) AS MAX, 
+    IFNULL(AVG(r.rating),0) AS average,
+CASE 
+	WHEN COUNT(r.rating) > 0 THEN 'ACTIVE'
+  ELSE 'INACTIVE'
+END AS STATUS
+FROM reviewers AS S
+LEFT JOIN reviews AS r ON s.id = r.reviewer_id
+GROUP BY s.id;
