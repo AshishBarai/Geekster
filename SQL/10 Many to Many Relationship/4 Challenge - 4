@@ -1,0 +1,5 @@
+SQL Many to Many Relationship Challenge 4
+
+SELECT s.first_name, s.last_name, r.rating
+FROM reviewers AS s
+JOIN reviews AS r ON r.id = reviewer_id;
