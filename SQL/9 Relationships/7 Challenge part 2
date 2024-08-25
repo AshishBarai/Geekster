@@ -1,0 +1,6 @@
+SQL Relationship challenge part 2
+
+SELECT s.first_name, p.title, p.grade
+FROM students AS s
+JOIN papers AS p ON s.id = p.student_id
+ORDER BY p.grade DESC;
