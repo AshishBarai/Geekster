@@ -4,3 +4,8 @@ SELECT s.first_name, p.title, p.grade
 FROM students AS s
 JOIN papers AS p ON s.id = p.student_id
 ORDER BY p.grade DESC;
+
+SELECT *
+FROM students AS s
+LEFT JOIN papers AS p ON s.id = p.student_id
+ORDER BY p.grade DESC;
