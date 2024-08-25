@@ -1,0 +1,6 @@
+SQL Many to Many relationship challenge - 3
+
+SELECT s.title, AVG(r.rating) AS AVG_rating
+FROM series AS s
+LEFT JOIN reviews AS r ON s.id = r.series_id
+GROUP BY s.title;
